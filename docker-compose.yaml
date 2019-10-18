@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: vishwacloudlab/stackdemo
+    build: 
+      context: .
+      dockerfile: Dockerfile01
+      args:
+        buildno: 1
+    ports:
+      - "8000-8005:8000"
+  redis:
+    image: redis:alpine
